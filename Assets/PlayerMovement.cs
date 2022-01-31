@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -51,6 +52,10 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.tag == "WinZone")
+        {
+            SceneManager.LoadScene("YouWin");
+        }
 
     }
         private void OnCollisionEnter2D(Collision2D collision)
@@ -59,9 +64,21 @@ public class PlayerMovement : MonoBehaviour
         {
             onGround = true;
         }
+        if (collision.gameObject.tag == "floor" || collision.gameObject.tag == "moveMeRock")
+        {
+            onGround = true;
+        }
+
+
         if (collision.gameObject.tag == "moveMe")
         {
             moveBox = GameObject.Find("moveBox1");
+            moveBox.GetComponent<MoveTheBox>().isColliding = true;
+            isMovingBox = true;
+        }
+        if (collision.gameObject.tag == "moveMeRock")
+        {
+            moveBox = GameObject.Find("moveCircle");
             moveBox.GetComponent<MoveTheBox>().isColliding = true;
             isMovingBox = true;
         }

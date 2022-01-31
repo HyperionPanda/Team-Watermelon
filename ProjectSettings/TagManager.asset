@@ -6,6 +6,11 @@ TagManager:
   tags:
   - floor
   - moveMe
+  - WinZone
+  - moveMeRock
+  - Melon
+  - Play
+  - terrain
   layers:
   - Default
   - TransparentFX

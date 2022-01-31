@@ -6,7 +6,7 @@ using TMPro;
 
 public class GameController : MonoBehaviour
 {
-    private int privateEnergy = 10000;
+    private int privateEnergy = 1000;
     private int CurrentprivateEnergy = 0;
     public int Energy = 100;
 
@@ -32,8 +32,12 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Energy < 0)
+        {
+            SceneManager.LoadScene("YouLose");
+        }
         energyText.text = "Energy: " + Energy;
-        if(CurrentprivateEnergy == (privateEnergy + 1000))
+        if(CurrentprivateEnergy == (privateEnergy + 100))
         {
             CurrentprivateEnergy = privateEnergy;
             Energy = Energy - 1;
