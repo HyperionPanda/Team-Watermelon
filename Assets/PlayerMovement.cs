@@ -29,12 +29,14 @@ public class PlayerMovement : MonoBehaviour
 
 
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
-
-        //transform.Translate(Vector3.up * jump * Time.deltaTime * speed);
-        if (Input.GetKeyDown(KeyCode.W) && onGround == true)
+            //transform.Translate(Vector3.up * jump * Time.deltaTime * speed);
+            if (Input.GetKeyDown(KeyCode.Space) && onGround == true)
         {
             onGround = false;
-            ballBod.AddForce(transform.up * 400);
+            //change value nect to Vector2 for change in jump height
+            ballBod.AddForce(Vector2.up*8,ForceMode2D.Impulse);
+            //transform.Translate(Vector3.up * jump * Time.deltaTime * speed);
+            
             if (isMovingBox == true)
             {
                 moveBox.GetComponent<MoveTheBox>().isColliding = false;
