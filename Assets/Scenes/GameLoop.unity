@@ -611,6 +611,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isColliding: 0
   player: {fileID: 1442351727}
+  hitLeft: 0
+  hitRight: 0
 --- !u!50 &259613451
 Rigidbody2D:
   serializedVersion: 4
@@ -631,7 +633,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &259613452
 CircleCollider2D:
   m_ObjectHideFlags: 0
