@@ -14,6 +14,10 @@ public class PlayerMovement : MonoBehaviour
     public GameObject moveBox;
     private bool isMovingBox = false;
     // Start is called before the first frame update
+
+    public string LastKeyPress = "";
+
+
     void Start()
     {
         jump = Input.GetAxis("Vertical");
@@ -27,7 +31,14 @@ public class PlayerMovement : MonoBehaviour
         //jump = Input.GetAxis("Vertical");
         horizontalInput = Input.GetAxis("Horizontal");
 
-
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            LastKeyPress = "A";
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            LastKeyPress = "D";
+        }
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
             //transform.Translate(Vector3.up * jump * Time.deltaTime * speed);
             if (Input.GetKeyDown(KeyCode.Space) && onGround == true)
