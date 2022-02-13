@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public bool onGround = true;
 
     public int level = 0;
+    private string newlevel = "Level" + level;
 
     public GameObject moveBox;
     private bool isMovingBox = false;
@@ -73,11 +74,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 SceneManager.LoadScene("YouWin");
             }
-            else {
-                private string newlevel = "Level" + level;
-                SceneManager.LoadScene(newlevel);
+            else {  newlevel = "Level" + level;
+                    SceneManager.LoadScene(newlevel);
             }
+
         }
+
+            
+        
 
     }
         private void OnCollisionEnter2D(Collision2D collision)
