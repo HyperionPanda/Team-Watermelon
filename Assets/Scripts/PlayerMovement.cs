@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     private float jump;
     public bool onGround = true;
 
+    public int level = 0;
+
     public GameObject moveBox;
     private bool isMovingBox = false;
     // Start is called before the first frame update
@@ -40,14 +42,14 @@ public class PlayerMovement : MonoBehaviour
             LastKeyPress = "D";
         }
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
-            //transform.Translate(Vector3.up * jump * Time.deltaTime * speed);
-            if (Input.GetKeyDown(KeyCode.Space) && onGround == true)
+        //transform.Translate(Vector3.up * jump * Time.deltaTime * speed);
+        if (Input.GetKeyDown(KeyCode.Space) && onGround == true)
         {
             onGround = false;
             //change value nect to Vector2 for change in jump height
-            ballBod.AddForce(Vector2.up*8,ForceMode2D.Impulse);
+            ballBod.AddForce(Vector2.up * 8, ForceMode2D.Impulse);
             //transform.Translate(Vector3.up * jump * Time.deltaTime * speed);
-            
+
             if (isMovingBox == true)
             {
                 moveBox.GetComponent<MoveTheBox>().isColliding = false;
@@ -67,7 +69,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.tag == "WinZone")
         {
-            SceneManager.LoadScene("YouWin");
+            if (level == 5)
+            {
+                SceneManager.LoadScene("YouWin");
+            }
+            else {
+                private string newlevel = "Level" + level;
+                SceneManager.LoadScene(newlevel);
+            }
         }
 
     }

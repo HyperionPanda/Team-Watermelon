@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     private int privateEnergy = 1000;
     private int CurrentprivateEnergy = 0;
     public int Energy = 100;
+    //public int level = 0;
 
     
     private int Score = 0;
