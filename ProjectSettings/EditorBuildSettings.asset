@@ -11,12 +11,27 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/game.unity
     guid: bf4b5983baaa0254ca8385ae8c0e515a
+  - enabled: 0
+    path: Assets/Scenes/GameLoop.unity
+    guid: b47d035cb57835f4991e88b7c038b115
   - enabled: 1
     path: Assets/Scenes/Begin.unity
     guid: 7aa6a7f8f1c618e42bda8ac8ebb69ee8
   - enabled: 1
-    path: Assets/Scenes/GameLoop.unity
-    guid: b47d035cb57835f4991e88b7c038b115
+    path: Assets/Scenes/Level 1.unity
+    guid: 530e101e0755f1d42b2351567e521be2
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: da181c17e6536614cbb61f8fcd9cd19a
+  - enabled: 1
+    path: Assets/Scenes/level 3.unity
+    guid: 6beb1abe5b8b63342a7001c40f57a55e
+  - enabled: 1
+    path: Assets/Scenes/Level 4.unity
+    guid: cb058073b69c73c4991cc207643aa412
+  - enabled: 1
+    path: Assets/Scenes/Level 5.unity
+    guid: ddc38d35e329fa74c88a6d5c549f0798
   - enabled: 1
     path: Assets/Scenes/YouLose.unity
     guid: 07751e66ab97c3b438f795c99ba1a5ab

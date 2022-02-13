@@ -74,8 +74,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 SceneManager.LoadScene("YouWin");
             }
-            else {  
-                
+            else {
+                level = level + 1;
                 SceneManager.LoadScene(level);
             }
 
