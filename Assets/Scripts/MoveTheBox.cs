@@ -96,6 +96,12 @@ public class MoveTheBox : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.tag == "Player")
+        {
+            player = GameObject.Find("Player");
+            player.GetComponent<PlayerMovement>().moveBox = gameObject;
+            isColliding = true;
+        }
 
         if (collision.gameObject.tag == "terrain")
         {

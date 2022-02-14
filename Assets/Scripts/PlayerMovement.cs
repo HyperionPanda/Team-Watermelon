@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private float horizontalInput;
     private float jump;
     public bool onGround = true;
+    public TextMeshProUGUI dialogue;
 
     public int level = 0;
     
@@ -80,6 +82,10 @@ public class PlayerMovement : MonoBehaviour
             }
 
         }
+        else if(other.gameObject.tag == "Dialogue")
+        {
+            dialogue.text = "Oh, you're lost arn't you? On an adventure eh? Well, do be careful. Continue onward to find your way now hohoho";
+        }
 
             
         
@@ -97,10 +103,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
+
         if (collision.gameObject.tag == "moveMe")
         {
-            moveBox = GameObject.Find("moveBox1");
-            moveBox.GetComponent<MoveTheBox>().isColliding = true;
+            //moveBox = GameObject.Find("moveBox1");
+            //moveBox.GetComponent<MoveTheBox>().isColliding = true;
             isMovingBox = true;
         }
         if (collision.gameObject.tag == "moveMeRock")

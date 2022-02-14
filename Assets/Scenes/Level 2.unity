@@ -1884,7 +1884,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 679798603318086296, guid: 4d0e2b98f8ba18343bd5a31982bbdbf3, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 679798603318086307, guid: 4d0e2b98f8ba18343bd5a31982bbdbf3, type: 3}
       propertyPath: m_Name
@@ -2266,7 +2266,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 679798603318086296, guid: 4d0e2b98f8ba18343bd5a31982bbdbf3, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 679798603318086307, guid: 4d0e2b98f8ba18343bd5a31982bbdbf3, type: 3}
       propertyPath: m_Name
@@ -2847,7 +2847,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 679798603318086296, guid: 4d0e2b98f8ba18343bd5a31982bbdbf3, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 679798603318086307, guid: 4d0e2b98f8ba18343bd5a31982bbdbf3, type: 3}
       propertyPath: m_Name
@@ -4328,6 +4328,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7354682710826403648, guid: fcae0df2230ce894a9d1539448743384, type: 3}
+      propertyPath: m_Mass
+      value: 0.7853982
+      objectReference: {fileID: 0}
     - target: {fileID: 7354682710826403650, guid: fcae0df2230ce894a9d1539448743384, type: 3}
       propertyPath: m_Name
       value: Player
