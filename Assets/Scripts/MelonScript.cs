@@ -24,5 +24,10 @@ public class MelonScript : MonoBehaviour
             master.GetComponent<GameController>().Energy = master.GetComponent<GameController>().Energy + 10;
             Destroy(gameObject);
         }
+        if (other.gameObject.tag == "trap")
+        {
+            master.GetComponent<GameController>().Energy = master.GetComponent<GameController>().Energy - 25;
+            Destroy(gameObject);
+        }
     }
 }

@@ -12,6 +12,7 @@ TagManager:
   - Play
   - terrain
   - Dialogue
+  - trap
   layers:
   - Default
   - TransparentFX
