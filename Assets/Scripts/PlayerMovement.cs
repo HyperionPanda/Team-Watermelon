@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        GameObject.Find("LevelController").GetComponent<BeginControl>().level = level;
         jump = Input.GetAxis("Vertical");
         ballBod = GetComponent<Rigidbody2D>();
     }

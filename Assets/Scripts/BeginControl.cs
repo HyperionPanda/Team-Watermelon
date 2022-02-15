@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class BeginControl : MonoBehaviour
 {
+    public int end = 8;
+    public int level = 0;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -14,9 +17,20 @@ public class BeginControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.S))
+        if (end == 9)
         {
-            SceneManager.LoadScene("GameLoop");
+            if (Input.GetKeyDown(KeyCode.T))
+            {
+                SceneManager.LoadScene(level);
+            }
+        }
+        else if (end == 10)
+        {
+            if (Input.GetKeyDown(KeyCode.T))
+            {
+                level = 0;
+                SceneManager.LoadScene("Level 1");
+            }
         }
         
     }
