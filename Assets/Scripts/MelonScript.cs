@@ -19,12 +19,12 @@ public class MelonScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Melon")
+        if (other.gameObject.tag == "Player")
         {
             master.GetComponent<GameController>().Energy = master.GetComponent<GameController>().Energy + 10;
             Destroy(gameObject);
         }
-        if (other.tag == "trap")
+        if (other.gameObject.tag == "trap")
         {
             master.GetComponent<GameController>().Energy = master.GetComponent<GameController>().Energy - 25;
             Destroy(gameObject);

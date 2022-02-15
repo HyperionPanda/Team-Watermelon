@@ -2684,7 +2684,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7354682710826403650, guid: fcae0df2230ce894a9d1539448743384, type: 3}
       propertyPath: m_TagString
-      value: Play
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7354682710826403654, guid: fcae0df2230ce894a9d1539448743384, type: 3}
       propertyPath: m_RootOrder
