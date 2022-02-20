@@ -37,7 +37,8 @@ public class GameController : MonoBehaviour
         {
             SceneManager.LoadScene("YouLose");
         }
-        energyText.text = "Energy: " + Energy;
+        //added time.deltatime here
+        energyText.text = "Energy: " + (Energy*Time.deltaTime);
         if(CurrentprivateEnergy == (privateEnergy + 100))
         {
             CurrentprivateEnergy = privateEnergy;
