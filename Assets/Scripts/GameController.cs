@@ -38,7 +38,7 @@ public class GameController : MonoBehaviour
             SceneManager.LoadScene("YouLose");
         }
         //added time.deltatime here
-        energyText.text = "Energy: " + (Energy*Time.deltaTime);
+        energyText.text = "Energy: " + (Energy);
         if(CurrentprivateEnergy == (privateEnergy + 100))
         {
             CurrentprivateEnergy = privateEnergy;
@@ -47,7 +47,7 @@ public class GameController : MonoBehaviour
         if (player.transform.localPosition != playerPosition)
         {
             playerPosition = player.transform.localPosition;
-            privateEnergy = privateEnergy - 1;
+            privateEnergy = privateEnergy - Time.deltaTime;
         }
     }
     
