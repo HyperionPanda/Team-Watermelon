@@ -22,14 +22,22 @@ public class FollowPlayer : MonoBehaviour
 
     void Update()
     {
-        if (emp.GetComponent<MoveUrAss>().direction == "left")
+        if (checkLevel.GetComponent<BeginControl>().level == 5)
+        {
+            if (emp.GetComponent<MoveUrAss>().direction == "left")
+            {
+                transform.position = new Vector3(player.position.x + offset.x, player.position.y + offset.y, offset.z);
+            }
+            else if (emp.GetComponent<MoveUrAss>().direction == "right")
+            {
+                transform.position = new Vector3(player.position.x - offset.x, player.position.y + offset.y, offset.z);
+
+
+            }
+        }
+        else
         {
             transform.position = new Vector3(player.position.x + offset.x, player.position.y + offset.y, offset.z);
         }
-        else if (emp.GetComponent<MoveUrAss>().direction == "right")
-        {
-            transform.position = new Vector3(player.position.x - offset.x, player.position.y + offset.y, offset.z);
-        }
-       
     }
 }

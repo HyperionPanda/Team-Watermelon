@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     public int level = 0;
 
     public bool hiding = false;
+
+    private bool TalktheTalk = false;
     
 
     public GameObject moveBox;
@@ -35,35 +37,40 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //issue here?
-        //hiding = false;
-
-        //jump = Input.GetAxis("Vertical");
-        horizontalInput = Input.GetAxis("Horizontal");
-
-        if (Input.GetKeyDown(KeyCode.A))
+        if (TalktheTalk != true)
         {
-            LastKeyPress = "A";
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            LastKeyPress = "D";
-        }
-        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
-        //transform.Translate(Vector3.up * jump * Time.deltaTime * speed);
-        if (Input.GetKeyDown(KeyCode.Space) && onGround == true)
-        {
-            onGround = false;
-            //change value nect to Vector2 for change in jump height
-            ballBod.AddForce(Vector2.up * 8, ForceMode2D.Impulse);
-            //transform.Translate(Vector3.up * jump * Time.deltaTime * speed);
 
-            if (isMovingBox == true)
+
+            //issue here?
+            //hiding = false;
+
+            //jump = Input.GetAxis("Vertical");
+            horizontalInput = Input.GetAxis("Horizontal");
+
+            if (Input.GetKeyDown(KeyCode.A))
             {
-                moveBox.GetComponent<MoveTheBox>().isColliding = false;
-                isMovingBox = false;
+                LastKeyPress = "A";
             }
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                LastKeyPress = "D";
+            }
+            transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+            //transform.Translate(Vector3.up * jump * Time.deltaTime * speed);
+            if (Input.GetKeyDown(KeyCode.Space) && onGround == true)
+            {
+                onGround = false;
+                //change value nect to Vector2 for change in jump height
+                ballBod.AddForce(Vector2.up * 8, ForceMode2D.Impulse);
+                //transform.Translate(Vector3.up * jump * Time.deltaTime * speed);
 
+                if (isMovingBox == true)
+                {
+                    moveBox.GetComponent<MoveTheBox>().isColliding = false;
+                    isMovingBox = false;
+                }
+
+            }
         }
         /*
         if (Input.GetKeyDown(KeyCode.Mouse1) && onGround == true)
@@ -89,7 +96,11 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (other.gameObject.tag == "Dialogue")
         {
+            TalktheTalk = true;
             dialogue.text = "Oh, you're lost arn't you? On an adventure eh? Well, do be careful. Continue onward to find your way now hohoho";
+            
+            StartCoroutine(DialogueHold());
+            
         }
         if (other.gameObject.tag == "Hiding")
         {
@@ -134,7 +145,14 @@ public class PlayerMovement : MonoBehaviour
             isMovingBox = true;
         }
     }
-    
+    IEnumerator DialogueHold()
+    {
+       
+        yield return new WaitForSeconds(5);
+        TalktheTalk = false;
+
+    }
+
     /*private void OnTriggerEnterStay2D(Collider2D stay)
     {
         if (stay.gameObject.tag == "Hiding")
