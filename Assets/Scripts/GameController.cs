@@ -6,7 +6,7 @@ using TMPro;
 
 public class GameController : MonoBehaviour
 {
-    private float privateEnergy = 1000;
+    private float privateEnergy = 100;
     private float CurrentprivateEnergy = 0;
     public int Energy = 100;
     //public int level = 0;
@@ -39,15 +39,16 @@ public class GameController : MonoBehaviour
         }
         //added time.deltatime here
         energyText.text = "Energy: " + (Energy);
-        if(CurrentprivateEnergy <= (privateEnergy + 100))
+        if(CurrentprivateEnergy == (privateEnergy+100))
         {
             CurrentprivateEnergy = privateEnergy;
             Energy = Energy - 1;
         }
         if (player.transform.localPosition != playerPosition)
         {
+            //Time.deltaTime
             playerPosition = player.transform.localPosition;
-            privateEnergy = privateEnergy - Time.deltaTime;
+            privateEnergy = privateEnergy - 1;
         }
     }
     
