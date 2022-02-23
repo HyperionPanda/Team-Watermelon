@@ -68,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     moveBox.GetComponent<MoveTheBox>().isColliding = false;
                     isMovingBox = false;
+                    moveBox = null;
                 }
 
             }
