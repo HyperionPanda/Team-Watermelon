@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     public TextMeshProUGUI dialogue;
 
     public int level = 0;
+
+    public bool hiding = false;
     
 
     public GameObject moveBox;
@@ -33,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //issue here?
+        //hiding = false;
 
         //jump = Input.GetAxis("Vertical");
         horizontalInput = Input.GetAxis("Horizontal");
@@ -83,13 +87,25 @@ public class PlayerMovement : MonoBehaviour
             }
 
         }
-        else if(other.gameObject.tag == "Dialogue")
+        else if (other.gameObject.tag == "Dialogue")
         {
             dialogue.text = "Oh, you're lost arn't you? On an adventure eh? Well, do be careful. Continue onward to find your way now hohoho";
         }
+        if (other.gameObject.tag == "Hiding")
+        {
+            hiding = true;
+        }
+        if (other.gameObject.tag == "NotHiding")
+        {
+            hiding = false;
+        }
+        if (other.gameObject.tag == "Sight" && hiding == false)
+        {
+            SceneManager.LoadScene(level);
+        }
 
-            
-        
+
+
 
     }
         private void OnCollisionEnter2D(Collision2D collision)
@@ -118,7 +134,21 @@ public class PlayerMovement : MonoBehaviour
             isMovingBox = true;
         }
     }
+    
+    /*private void OnTriggerEnterStay2D(Collider2D stay)
+    {
+        if (stay.gameObject.tag == "Hiding")
+        {
+            hiding = true;
 
+        }
+        
+
+
+
+
+    }
+    */
 }
    
 

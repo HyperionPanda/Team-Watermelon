@@ -13,6 +13,9 @@ TagManager:
   - terrain
   - Dialogue
   - trap
+  - Sight
+  - Hiding
+  - NotHiding
   layers:
   - Default
   - TransparentFX
