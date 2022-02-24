@@ -21,14 +21,16 @@ public class MoveTheBox : MonoBehaviour
     public bool hitLeft = false;
     public bool hitRight = false;
 
-    
+    private AudioClip aud;
+    private bool PlayingClip = false;
 
-    
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        aud = GetComponent<AudioSource>().clip;
         XScale = gameObject.transform.localScale.x;
         YScale = gameObject.transform.localScale.y;
         ZScale = gameObject.transform.localScale.z;
@@ -64,6 +66,11 @@ public class MoveTheBox : MonoBehaviour
             {
                 //do -1 for if touched from other side
                 //right
+                if ( PlayingClip == false)
+                {
+                    AudioSource.PlayClipAtPoint(aud, transform.position);
+                    PlayingClip = true;
+                }
                 gameObject.transform.position = new Vector3(player.transform.position.x + XScale, transform.position.y, transform.position.z);
                 //transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * PlayerSpeed);
             }
@@ -76,6 +83,11 @@ public class MoveTheBox : MonoBehaviour
             {
                 //do -1 for if touched from other side
                 //left
+                if ( PlayingClip == false)
+                {
+                    AudioSource.PlayClipAtPoint(aud, transform.position);
+                    PlayingClip = true;
+                }
                 gameObject.transform.position = new Vector3(player.transform.position.x - XScale, transform.position.y, transform.position.z);
                 //transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * PlayerSpeed);
             }
@@ -101,6 +113,7 @@ public class MoveTheBox : MonoBehaviour
             player = GameObject.Find("Player");
             player.GetComponent<PlayerMovement>().moveBox = gameObject;
             isColliding = true;
+            
         }
 
         if (collision.gameObject.tag == "terrain")

@@ -26,9 +26,12 @@ public class PlayerMovement : MonoBehaviour
 
     public string LastKeyPress = "";
 
+    private AudioClip aud;
+
 
     void Start()
     {
+        aud = GetComponent<AudioSource>().clip;
         GameObject.Find("LevelController").GetComponent<BeginControl>().level = level;
         jump = Input.GetAxis("Vertical");
         ballBod = GetComponent<Rigidbody2D>();
@@ -61,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 onGround = false;
                 //change value nect to Vector2 for change in jump height
+                AudioSource.PlayClipAtPoint(aud, transform.position);
                 ballBod.AddForce(Vector2.up * 8, ForceMode2D.Impulse);
                 //transform.Translate(Vector3.up * jump * Time.deltaTime * speed);
 
