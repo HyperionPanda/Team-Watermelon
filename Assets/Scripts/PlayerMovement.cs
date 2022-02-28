@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject moveBox;
     private bool isMovingBox = false;
+    public GameObject levelCONTROLLER;
     // Start is called before the first frame update
 
     public string LastKeyPress = "";
@@ -66,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
                 //change value nect to Vector2 for change in jump height
                 AudioSource.PlayClipAtPoint(aud, transform.position);
                 ballBod.AddForce(Vector2.up * 8, ForceMode2D.Impulse);
+                moveBox = null;
                 //transform.Translate(Vector3.up * jump * Time.deltaTime * speed);
 
                 if (isMovingBox == true)
@@ -94,7 +96,10 @@ public class PlayerMovement : MonoBehaviour
                 SceneManager.LoadScene("YouWin");
             }
             else {
+                levelCONTROLLER = GameObject.Find("LevelController");
                 level = level + 1;
+                levelCONTROLLER.GetComponent<BeginControl>().level = level;
+                DontDestroyOnLoad(levelCONTROLLER);
                 SceneManager.LoadScene(level);
             }
 
@@ -102,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
         else if (other.gameObject.tag == "Dialogue")
         {
             TalktheTalk = true;
-            dialogue.text = "Oh, you're lost arn't you? On an adventure eh? Well, do be careful. Continue onward to find your way now hohoho";
+            //dialogue.text = "Oh, you're lost arn't you? On an adventure eh? Well, do be careful. Continue onward to find your way now hohoho";
             
             StartCoroutine(DialogueHold());
             

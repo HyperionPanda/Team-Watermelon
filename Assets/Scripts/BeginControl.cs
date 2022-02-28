@@ -7,11 +7,13 @@ public class BeginControl : MonoBehaviour
 {
     public int end = 8;
     public int level = 0;
+    public GameObject levelcontrol;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        levelcontrol = this.gameObject;
     }
 
     // Update is called once per frame
@@ -21,7 +23,10 @@ public class BeginControl : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.T))
             {
+                end = end - 1;
+                DontDestroyOnLoad(this.gameObject);
                 SceneManager.LoadScene(level);
+               
             }
         }
         else if (end == 10)

@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
     //public GameObject moveBox;
 
     private Vector3 playerPosition;
+    public GameObject levelcontrol;
 
     //GameObject[] moveBoxes;
     // Start is called before the first frame update
@@ -28,6 +29,7 @@ public class GameController : MonoBehaviour
         energyText.text = "Energy: " + Energy;
         playerPosition = player.transform.localPosition;
         CurrentprivateEnergy = privateEnergy;
+        levelcontrol = GameObject.Find("LevelController");
     }
 
     // Update is called once per frame
@@ -35,6 +37,9 @@ public class GameController : MonoBehaviour
     {
         if (Energy < 0)
         {
+            levelcontrol.GetComponent<BeginControl>().end = 9;
+            DontDestroyOnLoad(levelcontrol);
+            
             SceneManager.LoadScene("YouLose");
         }
         //added time.deltatime here
