@@ -190,6 +190,30 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3142415415817540557, guid: 71e5ee3d0bdf88842a9edad82c0d90a8, type: 3}
+      propertyPath: m_Size.x
+      value: 9.161867
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142415415817540557, guid: 71e5ee3d0bdf88842a9edad82c0d90a8, type: 3}
+      propertyPath: m_Size.y
+      value: 2.4756098
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142415415817540557, guid: 71e5ee3d0bdf88842a9edad82c0d90a8, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.20389557
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142415415817540557, guid: 71e5ee3d0bdf88842a9edad82c0d90a8, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.7378049
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142415415817540557, guid: 71e5ee3d0bdf88842a9edad82c0d90a8, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142415415817540557, guid: 71e5ee3d0bdf88842a9edad82c0d90a8, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7964386489955237311, guid: 71e5ee3d0bdf88842a9edad82c0d90a8, type: 3}
       propertyPath: m_Name
       value: Dirt (2)
@@ -1377,7 +1401,7 @@ RectTransform:
   m_Children:
   - {fileID: 469537288}
   m_Father: {fileID: 0}
-  m_RootOrder: 75
+  m_RootOrder: 78
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1801,7 +1825,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 79
+  m_RootOrder: 83
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &200818016
 PrefabInstance:
@@ -7441,7 +7465,7 @@ PrefabInstance:
       objectReference: {fileID: 1415295910}
     - target: {fileID: 679798603318086296, guid: 4d0e2b98f8ba18343bd5a31982bbdbf3, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 679798603318086307, guid: 4d0e2b98f8ba18343bd5a31982bbdbf3, type: 3}
       propertyPath: m_Name
@@ -7449,7 +7473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 679798603318086307, guid: 4d0e2b98f8ba18343bd5a31982bbdbf3, type: 3}
       propertyPath: m_TagString
-      value: moveMe
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 679798603318086309, guid: 4d0e2b98f8ba18343bd5a31982bbdbf3, type: 3}
       propertyPath: m_RootOrder
