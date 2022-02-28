@@ -8,10 +8,12 @@ public class FollowPlayer : MonoBehaviour
     public Vector3 offset;
     private GameObject emp;
     private GameObject checkLevel;
+    private int currentlevel;
     // Start is called before the first frame update
     void Start()
     {
         checkLevel = GameObject.Find("LevelController");
+       
         if (checkLevel.GetComponent<BeginControl>().level == 5)
         {
             emp = GameObject.Find("security guard");
