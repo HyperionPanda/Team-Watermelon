@@ -1866,7 +1866,7 @@ PrefabInstance:
       objectReference: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
     - target: {fileID: 9149688863535123788, guid: c1114bd70b546764c873b4f911ead1bb, type: 3}
       propertyPath: m_Text
-      value: "My family and I are here to explore This forest, \nIwill Move ahead
+      value: "My family and I are here to explore this forest, \nI will move ahead
         of them. I'm sure they won't\nmind if I do some exploring."
       objectReference: {fileID: 0}
     - target: {fileID: 9149688863535123788, guid: c1114bd70b546764c873b4f911ead1bb, type: 3}
@@ -2095,10 +2095,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9149688863535123788, guid: c1114bd70b546764c873b4f911ead1bb, type: 3}
       propertyPath: m_Text
-      value: 'move next to a box to push and pull it.
-
-        jump to stop pulling
-        it.'
+      value: "Move next to a box to push and pull it. \nJump to stop pulling it."
       objectReference: {fileID: 0}
     - target: {fileID: 9149688863535123788, guid: c1114bd70b546764c873b4f911ead1bb, type: 3}
       propertyPath: m_FontSize
@@ -3395,8 +3392,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9149688863535123788, guid: c1114bd70b546764c873b4f911ead1bb, type: 3}
       propertyPath: m_Text
-      value: "hoo, hoo.\nWhere are yoou of too.\n\noon an adventure?\n\nWell I saw
-        somthing coool, \njust down that hill, \na sight worthy of adventure."
+      value: "hoo, hoo\nWhere are yoou off too?\n\noon an adventure?\n\nWell I saw
+        something coool, \njust down that hill, \na sight worthy of adventure."
       objectReference: {fileID: 0}
     - target: {fileID: 9149688863535123788, guid: c1114bd70b546764c873b4f911ead1bb, type: 3}
       propertyPath: m_FontSize
@@ -6470,11 +6467,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5086587614291452062, guid: c1114bd70b546764c873b4f911ead1bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.84
+      value: 3.41
       objectReference: {fileID: 0}
     - target: {fileID: 5086587614291452062, guid: c1114bd70b546764c873b4f911ead1bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3697729
+      value: 2.49
       objectReference: {fileID: 0}
     - target: {fileID: 5086587614291452062, guid: c1114bd70b546764c873b4f911ead1bb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6512,8 +6509,8 @@ PrefabInstance:
       propertyPath: m_Text
       value: 'Melons give you energy to keep
 
-        moving. try not to run out
-        of energy.'
+        moving. Try not to run out
+        of energy or you will fall asleep!'
       objectReference: {fileID: 0}
     - target: {fileID: 9149688863535123788, guid: c1114bd70b546764c873b4f911ead1bb, type: 3}
       propertyPath: m_FontSize
@@ -6596,7 +6593,7 @@ PrefabInstance:
       propertyPath: m_Text
       value: 'Use A and D to move left and right.
 
-        Spece to jump'
+        Space to jump'
       objectReference: {fileID: 0}
     - target: {fileID: 9149688863535123788, guid: c1114bd70b546764c873b4f911ead1bb, type: 3}
       propertyPath: m_FontSize

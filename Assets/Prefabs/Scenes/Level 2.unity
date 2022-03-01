@@ -2087,7 +2087,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9149688863535123788, guid: c1114bd70b546764c873b4f911ead1bb, type: 3}
       propertyPath: m_Text
-      value: 'Thinks: Sure, I could use a break,'
+      value: 'Thinks: Sure, I could use a break.'
       objectReference: {fileID: 0}
     - target: {fileID: 9149688863535123788, guid: c1114bd70b546764c873b4f911ead1bb, type: 3}
       propertyPath: m_FontSize
@@ -3866,7 +3866,7 @@ PrefabInstance:
         We will take
         good care of you.
 
-        come here.'
+        Come here.'
       objectReference: {fileID: 0}
     - target: {fileID: 9149688863535123788, guid: c1114bd70b546764c873b4f911ead1bb, type: 3}
       propertyPath: m_FontSize

@@ -410,11 +410,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5086587614291452062, guid: c1114bd70b546764c873b4f911ead1bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.42
+      value: 0.49
       objectReference: {fileID: 0}
     - target: {fileID: 5086587614291452062, guid: c1114bd70b546764c873b4f911ead1bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.83
+      value: 0.38
       objectReference: {fileID: 0}
     - target: {fileID: 5086587614291452062, guid: c1114bd70b546764c873b4f911ead1bb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -461,16 +461,12 @@ PrefabInstance:
 
 
         what
-        about your owners.
+        about your owners?
 
 
 
 
-
-        well, i should not tell you that there
-
-        is
-        a secret exit behind that box.'
+'
       objectReference: {fileID: 0}
     - target: {fileID: 9149688863535123788, guid: c1114bd70b546764c873b4f911ead1bb, type: 3}
       propertyPath: m_FontSize
@@ -547,13 +543,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9149688863535123788, guid: c1114bd70b546764c873b4f911ead1bb, type: 3}
       propertyPath: m_Text
-      value: 'there should be a vent you can get to, a guard ussually wanders there.
+      value: 'There should be a vent you can get to, a employee usually wanders there.
 
-        try
-        not to get caught.
+        Try
+        not to get caught!
 
 
-        good luck on your journey!'
+        Good luck on your journey!'
       objectReference: {fileID: 0}
     - target: {fileID: 9149688863535123788, guid: c1114bd70b546764c873b4f911ead1bb, type: 3}
       propertyPath: m_FontSize
@@ -1695,7 +1691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5086587614291452062, guid: c1114bd70b546764c873b4f911ead1bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.04
+      value: -0.42
       objectReference: {fileID: 0}
     - target: {fileID: 5086587614291452062, guid: c1114bd70b546764c873b4f911ead1bb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1731,8 +1727,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9149688863535123788, guid: c1114bd70b546764c873b4f911ead1bb, type: 3}
       propertyPath: m_Text
-      value: "Im on an Adventure!\n\n\n\n\njust taking a little break.\n\n\nThey
-        will be fine, I will find them later. \nprobably still back at the forest.\n\n\n\n\nreally?"
+      value: "Im on an adventure!\n\n\n\nJust taking a little break.\n\n\nThey will
+        be fine, I will find them later. \nThey are probably still back at the forest.\n\n\n"
       objectReference: {fileID: 0}
     - target: {fileID: 9149688863535123788, guid: c1114bd70b546764c873b4f911ead1bb, type: 3}
       propertyPath: m_FontSize
