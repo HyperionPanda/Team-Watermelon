@@ -67,7 +67,8 @@ public class PlayerMovement : MonoBehaviour
                 //change value nect to Vector2 for change in jump height
                 AudioSource.PlayClipAtPoint(aud, transform.position);
                 ballBod.AddForce(Vector2.up * 8, ForceMode2D.Impulse);
-                moveBox = null;
+
+                //moveBox = null;
                 //transform.Translate(Vector3.up * jump * Time.deltaTime * speed);
 
                 if (isMovingBox == true)
