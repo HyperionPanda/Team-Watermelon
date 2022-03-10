@@ -107,10 +107,10 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (other.gameObject.tag == "Dialogue")
         {
-            TalktheTalk = true;
+            //TalktheTalk = true;
             //dialogue.text = "Oh, you're lost arn't you? On an adventure eh? Well, do be careful. Continue onward to find your way now hohoho";
             
-            StartCoroutine(DialogueHold());
+            //StartCoroutine(DialogueHold());
             
         }
         if (other.gameObject.tag == "Hiding")
