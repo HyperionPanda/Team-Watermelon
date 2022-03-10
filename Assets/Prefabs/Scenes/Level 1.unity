@@ -2981,6 +2981,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree trunk
       objectReference: {fileID: 0}
+    - target: {fileID: 1890508367665856112, guid: 04ec0fca39d5bc54fb07a73813daff67, type: 3}
+      propertyPath: m_TagString
+      value: terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 5330769660944798311, guid: 04ec0fca39d5bc54fb07a73813daff67, type: 3}
       propertyPath: m_RootOrder
       value: 36
