@@ -6,7 +6,7 @@ public class MoveUrAss : MonoBehaviour
 {
     public GameObject employee;
     private float horizontalInput;
-    private int speed = 2;
+    private int speed = 3;
     public string direction = "left";
     private bool start = true;
     // Start is called before the first frame update
