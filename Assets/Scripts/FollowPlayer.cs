@@ -24,7 +24,7 @@ public class FollowPlayer : MonoBehaviour
 
     void Update()
     {
-        if (checkLevel.GetComponent<BeginControl>().level == 5)
+        if (checkLevel.GetComponent<BeginControl>().level == 5 && this.gameObject == emp)
         {
             if (emp.GetComponent<MoveUrAss>().direction == "left")
             {
@@ -37,7 +37,7 @@ public class FollowPlayer : MonoBehaviour
 
             }
         }
-        else
+        else if (this.gameObject == emp)
         {
             transform.position = new Vector3(player.position.x + offset.x, player.position.y + offset.y, offset.z);
         }
