@@ -153,6 +153,7 @@ MonoBehaviour:
   level: 0
   hiding: 1
   moveBox: {fileID: 0}
+  levelCONTROLLER: {fileID: 0}
   LastKeyPress: 
 --- !u!82 &3059433910689393652
 AudioSource:
@@ -165,7 +166,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 005c884bdb8b84f4fa9f650734e5ff44, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
